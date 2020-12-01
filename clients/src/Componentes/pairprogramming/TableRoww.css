@@ -1,0 +1,7 @@
+.boton__calif{
+    background-color: black;
+    color: yellow;
+    border-radius: 25%;
+    cursor: pointer;
+    margin-left: 2px
+}

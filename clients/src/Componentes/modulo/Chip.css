@@ -1,0 +1,9 @@
+.form__videos{
+    display: flex;
+    margin-left: 4%;
+}
+.botonAgregar{
+    margin-left: 3% !important;
+    color: black !important;
+    font-weight: bold !important;
+}

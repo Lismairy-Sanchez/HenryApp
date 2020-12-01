@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:wght@300&display=swap');
+.menu2{
+    background-color: black !important;
+    padding: 10px;
+  }
+  .cont_nav2{
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .cont_nav2 img{
+    padding-left: 2%;
+  }
+  .link2{
+    /* background-color: blueviolet; */
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.5em !important;
+    font-weight: normal;
+    
+  }

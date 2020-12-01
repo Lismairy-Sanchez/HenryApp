@@ -1,0 +1,37 @@
+.todo__chat{
+    max-width: 40% !important;
+    max-height: 70% !important;
+    display:scroll;
+        position:fixed;
+        bottom:30px;
+        right:30px;
+    background-color: white;
+    
+}
+.form__chat{
+    padding: 20px;
+    display:scroll;
+        position:fixed;
+        bottom:0px;
+        right:20px;
+    width: 39.5% !important;
+    z-index: 1;
+    margin: 0px;
+    background-color: rgb(218, 216, 216) !important;
+    box-sizing: border-box;
+}
+.form__control{
+    display: flex !important;
+    flex-direction: row !important;
+}
+.input__form{
+    flex: 5;
+}
+.boton__form{
+    flex: 1;
+    text-align: center !important;
+    margin-right: 50px !important;
+    background-color: rgb(24, 23, 23) !important;
+    color: rgb(230, 230, 84) !important;
+}
+
