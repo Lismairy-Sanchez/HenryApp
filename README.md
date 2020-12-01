@@ -66,7 +66,7 @@ Password: admin
 
 ### Welcome:
 
-![alt text](./Readme_images/Welcome.jpeg "Welcome")
+![alt text](./Readme_images/welcome.jpeg "Welcome")
 
 ### Module:
 
