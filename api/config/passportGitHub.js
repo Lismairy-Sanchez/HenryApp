@@ -11,24 +11,17 @@ passport.use(
       clientSecret: githubClientSecret,
       callbackURL: "http://localhost:3001/auth/github/callback",
     },
-    async (accessToken, refreshToken, profile, done) => {
-      try {
-        const user = await User.findOrCreate({
-          where: { githubId: profile.id },
-          defaults: {
-            name: profile.displayName,
-            email: profile.emails ? profile.emails[0].value : null,
-          },
-        });
-
-        if (!user)
-          return done(null, false, {
-            message: "No pudimos loguearte con esa cuenta",
-          });
-        return done(null, user);
-      } catch (error) {
-        done(error);
-      }
+    function (accessToken, refreshToken, profile, done) {
+      User.findOrCreate(
+        {
+          githubId: profile.id,
+          name: profile.displayName,
+          email: profile.emails[0].value,
+        },
+        function (err, user) {
+          return done(err, user);
+        }
+      );
     }
   )
 );

@@ -6,28 +6,17 @@ import Dialog from "../../Componentes/alerts/dialog";
 const url = "http://localhost:3001"
 
 export const postCalendar = (event) => async (dispatch) => {
-    return await axios
-      .post(`${url}/calendar/create`, event)
-      .then((res) => {
-        dispatch({
-          type: actionTypes.CREATE_EVENT,
-          event: res.data,
-        });
-        Toast.fire({
-          icon: "success",
-          title: `Se registro el evento: ${event.title}`,
-        });
-      })
-      .catch((err) => {
-        dispatch({
-          error: err,
-        });
-        Toast.fire({
-          icon: "error",
-          title: "Error al crear evento",
-        });
+  return axios
+    .post(`${url}/calendar/create`, event)
+    .then((res) => {
+      console.log('respuesta', res.data)
+      dispatch({
+        type: actionTypes.CREATE_EVENT,
+        event: res.data,
       });
-  };
+    })
+    .catch((err) => console.log(err));
+};
 
   export const getAllEvents = () => async (dispatch) => {
     try {

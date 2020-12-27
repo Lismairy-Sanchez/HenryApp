@@ -1,16 +1,16 @@
-.body {
+.bodyError {
   background-color: rgb(32, 54, 70);
   color: white;
 }
 
-header {
+.header2 {
   background-color: rgba(44, 77, 100, 0.5);
   width: 100%;
   margin: auto;
   height: auto;
 }
 
-main {
+.main2 {
   background: linear-gradient(
     to bottom,
     rgba(44, 76, 99, 1) 0%,
@@ -22,7 +22,7 @@ main {
   padding-top: 20px;
 }
 
-footer {
+.footer2 {
   background-color: rgba(10, 16, 59, 1);
   height: 50px;
   width: 100%;
@@ -64,15 +64,16 @@ p {
   margin-top: -6%;
 }
 
-h2 {
+.error {
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.75);
   text-transform: uppercase;
   margin: 30px;
   padding: 30px;
-  font-family: "Lobster Two", cursive;
   letter-spacing: 2px;
-  font-size: 26pt;
+  font-size: 60pt !important;
   font-stretch: expanded;
+  text-align: center;
+  color: gold;
 }
 
 #nubes {
@@ -121,22 +122,4 @@ h2 {
   width: auto;
 }
 
-#angrybird {
-  transition-property: all;
-  transition-duration: 0.2s;
-  transition-timing-function: linear;
-  transform: rotate(0deg);
-  position: absolute;
-  margin-left: 2%;
-  margin-top: 10.5%;
-}
 
-#angrybird:active {
-  transition-property: all;
-  transition-duration: 1s;
-  transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
-  transform: rotate(75deg);
-  position: absolute;
-  margin-left: 100%;
-  margin-top: -20%;
-}

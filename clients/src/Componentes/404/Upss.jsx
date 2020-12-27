@@ -5,13 +5,13 @@ import "./Upss.css";
 const Upss = () => {
   return (
     <>
-      <div className="body">
-        <div className="header">
+      <div className="bodyError">
+        <div className="header2">
           <div class="luna"></div>
-          <h1>Upss...</h1>
+          <h2>Upss...</h2>
         </div>
 
-        <div className="main">
+        <div className="main2">
           <div id="nubes"></div>
           <div class="estrella1"></div>
           <div class="estrella2"></div>
@@ -22,11 +22,11 @@ const Upss = () => {
               alt="cohete"
               id="img_cohete"
             />
-            <h1>Error 404!</h1>
           </div>
+          <h1 className="error">Error 404!</h1>
         </div>
 
-        <footer>
+        <footer className="footer2">
           <p>Deja el ratón sobre el cohete para despegar</p>
         </footer>
       </div>

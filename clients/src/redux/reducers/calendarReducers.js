@@ -6,18 +6,12 @@ const initialState = {
 
 
 const calendarReducers = (state=initialState, action) => {
-    
+    console.log('mostrar action',action)
     switch (action.type) {
         case actionTypes.CREATE_EVENT:
           return {
             ...state,
-            allEvents: state.allEvents.push({
-                id:action._id,
-                title:action.title,                     
-                start:new Date(action.year, action.month-1, action.day, action.hour, action.minute), 
-                end:new Date(action.endYear, action.endMonth-1, action.endDay, action.endHour, action.endMinute), 
-                allDay:action.allDay
-            }),
+            
           };
 
 

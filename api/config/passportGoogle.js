@@ -5,7 +5,6 @@ const { googleClientID, googleClientSecret } = process.env;
 const User = require("../models/user");
 
 //----------------------------------PASSPORT GOOGLE-STRATEGY---------------------------------------
-
 passport.use(
   new GoogleStrategy(
     {
@@ -13,34 +12,28 @@ passport.use(
       clientSecret: googleClientSecret,
       callbackURL: "http://localhost:3001/auth/google/callback",
     },
-    async (accessToken, refreshToken, profile, done) => {
-      try {
-        const user = await User.findOrCreate({
-          where: { googleId: profile.id },
-          defaults: {
-            name: profile.displayName,
-            email: profile.emails[0].value,
-          },
-        });
-
-        if (!user)
-          return done(null, false, {
-            message: "No pudimos loguearte con esa cuenta",
-          });
-
-        return done(null, user);
-      } catch (error) {
-        done(error);
-      }
+    function (accessToken, refreshToken, profile, cb) {
+      User.findOrCreate(
+        {
+          googleId: profile.id,
+          name: profile.displayName,
+          email: profile.emails[0].value,
+        },
+        function (err, user) {
+          return cb(err, user);
+        }
+      );
     }
   )
 );
+
 //---------Passport Serializer
 passport.serializeUser((user, done) => done(null, user.id));
 
 //---------Passport Deserializer
 passport.deserializeUser(function (id, done) {
   User.findById(id, (err, user) => {
+    console.log(user);
     done(err, user);
   });
 });

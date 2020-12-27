@@ -20,6 +20,7 @@ import ProtectedStudentRoute from "./Componentes/ProtectedRoutes/ProtectedStuden
 import ProtectedAdminRoute from "./Componentes/ProtectedRoutes/ProtectedAdminRoutes";
 import ProtectedInstructorRoute from "./Componentes/ProtectedRoutes/ProtectedInstructorRoute";
 import ClasesRender from "./Componentes/Instructor/ClasesRender";
+import Upss from "./Componentes/404/Upss"; 
 
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
         <ProtectedAdminRoute exact path="/admin" component={Admin} />
         <ProtectedAdminRoute path="/calendarioadmin" component={Calenadmin} />
         <ProtectedAdminRoute path="/admin/perfil" component={Perfil} />
+        <Route component={Upss} />
       </Switch>
     </div>
   );

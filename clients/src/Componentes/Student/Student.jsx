@@ -71,7 +71,7 @@ const Student = () => {
                 <div>
                   <h2>Homeworks</h2>
                   <div className="boton_link">
-                    <Link className="link" to="https://github.com/">Ingresar</Link>
+                    <a href="https://github.com/" className="link">Ingresar</a>
                   </div>
                 </div>
               </div>

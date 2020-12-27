@@ -85,7 +85,7 @@ export default function NewModule() {
     var newarr = [{}];
     console.log(arr);
     arr.map((a) => {
-      if (a.cohorte !== undefined) {
+      if (a.cohorte !== undefined && a.cohorte !== null) {
         if (a.cohorte.name === coho.name) {
           newarr.push(a);
         }

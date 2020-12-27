@@ -84,13 +84,13 @@ export default function Login() {
           </div>
 
           {/* Boton Facebook  */}
-          <a href="http://localhost:3001/auth/github">
-            <div className="btn-alternativo" id="github" value="github">
-              {/* <GitHubIcon/> */}
-              <img src="https://image.flaticon.com/icons/png/512/25/25231.png" />
-              <p>Continuar con GitHub</p>
+          {/* <a href="http://localhost:3001/auth/github"> */}
+          {/* <div className="btn-alternativo" id="github" value="github"> */}
+          {/* <GitHubIcon/> */}
+          {/* <img src="https://image.flaticon.com/icons/png/512/25/25231.png" /> */}
+          {/* <p>Continuar con GitHub</p>
             </div>
-          </a>
+          </a> */}
 
           {/* Boton Google */}
           <a href="http://localhost:3001/auth/google">

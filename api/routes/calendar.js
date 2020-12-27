@@ -13,8 +13,10 @@ router.get("/all", async (req, res) => {
 
 
 router.post("/create", async (req, res) => {
+  console.log('ruta calendar')
     const {title, year, month, day, hour, minute, endYear, 
       endMonth, endDay, endHour, endMinute, allDay} = req.body;
+      
     if (!title || !year || !month || !day || !hour || !endYear || 
       !endMonth || !endDay || !endHour || !endMinute || allDay===undefined) {
         return res.status(400).send("Faltan parametros")
@@ -22,10 +24,10 @@ router.post("/create", async (req, res) => {
       hour:hour, minute:minute, endYear:endYear, 
       endMonth:endMonth, endDay:endDay, endHour:endHour, endMinute:endMinute, allDay:allDay }, function (err, calendar) {
         if (err) {
-          console.log(err);
+          console.log('que esta apsandah',err);
           return;
         }
-        res.status(200).json({ msg: "Ok", calendar });
+        res.status(200).send(calendar);
       })
     })
 
